@@ -4,7 +4,6 @@ package string;
 * @author ZHX
 * @date 2019年3月15日下午2:13:16 
 * @Description: 28. 实现strStr()
-* 
 */
 public class StrStr {
 	public int strStr(String haystack, String needle) {
