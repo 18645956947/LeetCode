@@ -2,7 +2,6 @@ package Array;
 
 import java.util.Arrays;
 
-import zhx.day0215.Solution;
 
 /** 
 * @author ZHX
@@ -40,7 +39,7 @@ public class Merge {
         
     }
 	public static void main(String[] args) {
-		Solution solution = new Solution();
+		Merge solution = new Merge();
 		int[] A = {1,2,3,0,0,0};
 		int[] B = {4,5,6};
 		solution.merge(A,3,B,3);
