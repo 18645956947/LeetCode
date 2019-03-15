@@ -1,8 +1,6 @@
 package string;
 
-import zhx.day1216.Solution;
-
-/** 
+/**
 * @author zhx
 * @date 2019年3月15日下午1:45:08 
 * @Description: 344. 反转字符串
@@ -24,7 +22,7 @@ public class ReverseString {
     }
 	public static void main(String[] args) {
 		String s = "A man, a plan, a canal: Panama";
-		Solution s1 = new Solution();
+		ReverseString s1 = new ReverseString();
 		s1.reverseString(s);
 	}
 }
