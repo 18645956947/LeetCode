@@ -3,8 +3,6 @@ package List;
 import java.util.HashSet;
 import java.util.Set;
 
-import zhx.day1224.ListNode;
-
 /** 
 * @author ZHX
 * @date 2019年3月15日下午2:27:44 
