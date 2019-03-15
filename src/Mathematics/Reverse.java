@@ -1,6 +1,5 @@
 package Mathematics;
 
-import zhx.day1216.Solution1;
 
 /** 
 * @author zhx
