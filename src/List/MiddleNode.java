@@ -1,7 +1,5 @@
 package List;
 
-import zhx.day1224.ListNode;
-
 /** 
 * @author ZHX
 * @date 2019年3月15日下午2:26:32 
