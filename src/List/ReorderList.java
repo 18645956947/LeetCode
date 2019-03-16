@@ -1,3 +1,4 @@
+package List;
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -6,7 +7,16 @@
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+
+/**
+ * 143. 重排链表
+ *
+ * 思路就是三步走
+ * 第一步，快慢指针找中点，截为两段注意把第一段指针最后一个节点的下一个节点指向null
+ * 第二步，把后半段链表反转
+ * 第三步，按照后半段的长度，在第一个链表中隔一个插入一个
+ */
+public class ReorderList {
     public void reorderList(ListNode head) {
         if(head == null || head.next == null){
             return ;
