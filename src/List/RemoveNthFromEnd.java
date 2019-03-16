@@ -1,8 +1,7 @@
 package List;
-import zhx.day1224.ListNode;
 
 //19. 删除链表的倒数第N个节点
-class Solution {
+public class RemoveNthFromEnd {
     public ListNode removeNthFromEnd(ListNode head, int n) {
        ListNode f = head;
 	   ListNode s = head;
