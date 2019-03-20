@@ -1,14 +1,9 @@
 package List;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-import javax.security.auth.callback.LanguageCallback;
-import java.util.List;
-
 /** 
-* @author lenovo
-* @date 2019��3��11������2:44:24 
-* @Description: 109. ��������ת������������
+* @author zhx
+* @date 2019.3.20
+* @Description: 109.将有序链表转化为二叉搜索树
 */
 public class SortedListToBST {
     public TreeNode sortedListToBST(ListNode head) {
