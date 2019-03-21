@@ -1,6 +1,5 @@
 package List;
 
-import zhx.day1224.ListNode;
 
 /** 
 * @author ZHX
