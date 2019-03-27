@@ -3,7 +3,7 @@ package recursion;
 import Tree.TreeNode;
 
 /**
- * 687. 最长同值路径
+ * 687. 最长同值路径(递归)
  */
 public class LongestUnivaluePath {
     public int longestUnivaluePath(TreeNode root) {
