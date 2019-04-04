@@ -2,6 +2,10 @@ package Tree;
 
 import java.util.concurrent.TimeoutException;
 
+/**
+ * 感受递归的调用过程
+ * @author zhx
+ */
 public class Text {
     public int  depth(int n){
         if(n == 1){
