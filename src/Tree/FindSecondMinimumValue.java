@@ -11,23 +11,21 @@ import java.util.Queue;
  */
 public class FindSecondMinimumValue {
     public int findSecondMinimumValue(TreeNode root) {
-        if(root == null || root.left == null){
+        if (root == null || root.left == null)
             return -1;
-        }
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        int min = root.val, res = Integer.MAX_VALUE;
         queue.offer(root);
-        int min = root.val;
-        int res = Integer.MAX_VALUE;
-        while (!queue.isEmpty()){
-            TreeNode temp = queue.poll();
-            if(temp.val > min){
-                res = Math.min(res, temp.val);
-            }
-            if(root.left != null){
-                queue.offer(root.left);
-            }
-            if (root.right != null){
-                queue.offer(root.right);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode temp = queue.poll();
+                if (temp.val > min)
+                    res = Math.min(res, temp.val);
+                if (temp.left != null)
+                    queue.offer(temp.left);
+                if (temp.right != null)
+                    queue.offer(temp.right);
             }
         }
         return res == Integer.MAX_VALUE ? -1 : res;
