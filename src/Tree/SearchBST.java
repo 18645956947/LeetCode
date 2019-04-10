@@ -1,7 +1,7 @@
 package Tree;
 
 /**
- * 700. ¶þ²æËÑË÷Ê÷ÖÐµÄËÑË÷
+ *700. ¶þ²æËÑË÷Ê÷ÖÐµÄËÑË÷
  * @author zhx
  */
 public class SearchBST {
@@ -9,6 +9,14 @@ public class SearchBST {
         if(root == null){
             return null;
         }
-        return root;
+        if(root.val == val){
+            return root;
+        }
+        if(root.val > val){
+            return searchBST(root.left, val);
+        }
+        else{
+            return searchBST(root.right, val);
+        }
     }
 }
