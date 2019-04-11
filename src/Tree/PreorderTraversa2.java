@@ -6,8 +6,8 @@ import java.util.Stack;
 
 /**
  * 144. 二叉树的前序遍历
- * @author zhx
- * 用系统栈模拟递归的操作，表示树的前序遍历
+ *  * @author zhx
+ *  * 用系统栈模拟递归的操作，表示树的前序遍历
  */
 class Command{
     String s ;//go print
