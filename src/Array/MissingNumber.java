@@ -33,6 +33,7 @@ public class MissingNumber {
         }
         return -1;
     }
+
     public static void main(String[] args){
         int[] a = new int[]{0,4,5,2,3};
         System.out.println(MissingNumber.missingNumber(a));
