@@ -8,6 +8,7 @@ import java.util.Queue;
  * @author zhx
  */
 public class SumOfLeftLeaves {
+
     public int sumOfLeftLeaves(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
@@ -29,6 +30,16 @@ public class SumOfLeftLeaves {
         return sum;
     }
 
-
-
+    int res;
+    public  int sumOfLeftLeaves_01(TreeNode root) {
+        if(root == null){
+            return 0;
+        }
+        if(root.left!= null && root.left.left == null&&root.left.right == null){
+            res += root.left.val;
+        }
+        sumOfLeftLeaves_01(root.left);
+        sumOfLeftLeaves_01(root.right);
+        return res;
+    }
 }
