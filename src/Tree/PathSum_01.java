@@ -12,6 +12,8 @@ public class PathSum_01 {
             return 0;
         }
         int res = findPath(root, sum);
+        res +=  pathSum(root.left, sum);
+        res +=  pathSum(root.right, sum);
         return res;
     }
     private int findPath(TreeNode node, int sum){
