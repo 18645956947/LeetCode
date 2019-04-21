@@ -22,37 +22,34 @@ public class LetterCombinations {
             "tuv",//8
             "wxyz"//8
     };
-    private List<String> res = new ArrayList<>();
+    List<String> res = new ArrayList<>();
     public List<String> letterCombinations(String digits) {
-        res.clear();
         if(digits == ""){
             return res;
         }
-        findCombination(digits, 0, "");
+        findCombinations(digits, 0, "");
         return res;
+
     }
-    private void findCombination(String digite, int index, String s){
-        System.out.println(index + " : " + s);
-        if(index == digite.length()){
-            if(s != ""){
-                System.out.println("get "+s+" return");
-                res.add(s);
-            }
+    private void findCombinations(String digits, int index, String s){
+        System.out.println("index : "+index+" s : "+s);
+        if(index == digits.length()){
+           if(s != ""){
+               res.add(s);
+           }
             return;
         }
-        char c = digite.charAt(index);
-        String letters = a[c - '0'];
+        char c = digits.charAt(index);
+        String letters = a[c-'0'];
         for(int i = 0;i<letters.length();i++){
-            System.out.println("digite["+index+"]= "+c+" use "+letters.toCharArray()[i]);
-
-            findCombination(digite, index+1, s + letters.toCharArray()[i]);
+            System.out.println("digits["+index+"]="+c+" use "+letters.toCharArray()[i]);
+            findCombinations(digits, index+1, s+letters.toCharArray()[i]);
         }
-        System.out.println(" digite[ "+index+"]= "+c+" complete return");
     }
     public static void main(String[] args){
         LetterCombinations letterCombinations = new LetterCombinations();
         List<String> list = letterCombinations.letterCombinations("23");
-        for (int i = 0;i<list.size();i++){
+        for(int i = 0;i<list.size();i++){
             System.out.println(list.get(i));
         }
     }
