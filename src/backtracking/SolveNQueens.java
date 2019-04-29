@@ -65,4 +65,14 @@ public class SolveNQueens {
         }
         return board;
     }
+    public static void main(String[] args){
+        SolveNQueens solveNQueens = new SolveNQueens();
+        List<List<String>> res = solveNQueens.solveNQueens(4);
+        for (int i = 0; i < res.size(); i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.println(res.get(i).get(j));
+            }
+            System.out.println();
+        }
+    }
 }
