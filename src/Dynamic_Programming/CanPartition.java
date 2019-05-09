@@ -26,7 +26,6 @@ public class CanPartition {
 
     }
 
-
     private boolean tryPartition(int[] nums, int index, int sum){
 
         if(sum == 0){
@@ -41,6 +40,5 @@ public class CanPartition {
         memo[index][sum] = (tryPartition(nums, index-1, sum)
                 || tryPartition(nums, index-1, sum - nums[index])) ? 1 : 0;
         return memo[index][sum] == 1;
-
     }
 }
