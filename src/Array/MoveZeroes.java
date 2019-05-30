@@ -20,8 +20,11 @@ public class MoveZeroes {
 				index++;
 			}
 		}
-		while(index<nums.length) {
-			nums[index++]= 0; 
+		/*while(index<nums.length) {
+			nums[index++]= 0;
+		}*/
+		for(int i = index;i<nums.length;i++) {
+			nums[i] = 0;
 		}
 	}
 	public static void main(String[] args) {
