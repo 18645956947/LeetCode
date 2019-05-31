@@ -6,18 +6,19 @@ package Array;
  */
 public class RemoveElement {
     public int removeElement(int[] nums, int val) {
-        int index = 0;
-        int a = nums.length;
-        for(int i = 0; i < a; i++){
-            if(nums[i] != val){
-                if(i != index){
-                    nums[index] = nums[i];
-                    index++;
-                }else{
-                    index++;
-                }
+        int i = 0;
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] != val) {
+                nums[i++] = nums[j];
             }
         }
-        return index;
+        return i;
+    }
+
+    public static void main(String[] args) {
+        RemoveElement removeElement = new RemoveElement();
+        int[] nums = new int[]{0,1,2,2,3,0,4,2};
+        System.out.println(removeElement.removeElement(nums, 2));
+
     }
 }
