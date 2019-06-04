@@ -32,7 +32,6 @@ public class BubbleSort {
 	  //ц╟ещеепР
 	 public static void main(String[] args) {
 		 int[] sum = new int[] {4,3,3,2,1};
-		 bubbleSort(sum);
 		 System.out.println(Arrays.toString(bubble(sum)));
 	 }
 	 
