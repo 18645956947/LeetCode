@@ -23,11 +23,11 @@ public class Quick_Sort {
             while (nums[j] >= pivot && i < j){
                 j--;
             }
-            nums[i] = nums[j];
+            nums[i] = nums[j];//交换比枢轴小的记录到左端
             while (nums[i] <= pivot && i < j){
                 i++;
             }
-            nums[j] = nums[i];
+            nums[j] = nums[i];//交换比枢轴小的记录到右端
         }
         nums[i] = pivot;
         return i;
