@@ -11,6 +11,7 @@ public class 链表中倒数第k个结点 {
         if(head == null){
             return head;
         }
+
         int sum = 0;//链表长度
         ListNode cur = null;
         ListNode temp = null;
