@@ -15,6 +15,7 @@ public class CombinationSum2 {
         List<Integer> list = new ArrayList();
         backtracking(list, candidates, target, 0);
         //ШЅжи
+
         Set<List<Integer>> set = new HashSet<>(res);
         res = new ArrayList<>(set);
         return res;
@@ -39,7 +40,6 @@ public class CombinationSum2 {
         CombinationSum2 c = new CombinationSum2();
         int[] a = new int[]{10,1,2,7,6,1,5};
         List<List<Integer>> p = c.combinationSum2(a, 8);
-        System.out.println(p);
         /*List<List<Integer>> ll = new ArrayList();
         List<Integer> q = new ArrayList();
         q.add(1);
