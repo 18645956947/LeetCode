@@ -7,9 +7,11 @@ package Coding_Interviews;
 public class 链表中环的入口结点 {
 
     public ListNode EntryNodeOfLoop(ListNode pHead){
+
         if(pHead == null || pHead.next == null || pHead.next.next == null){
             return null;
         }
+
         ListNode first = pHead.next.next;
         ListNode slow = pHead.next;
         while(first != slow){
