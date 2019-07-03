@@ -38,4 +38,5 @@ public class 字符流中第一个不重复的字符 {
             }
         }
         return c;
-    }}
+    }
+}
