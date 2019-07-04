@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 
 /**
  * 剑指offer--第一个只出现一次的字符
- * @au
+ * @author zhx
  */
 public class 第一个只出现一次的字符 {
     public int FirstNotRepeatingChar(String str) {
