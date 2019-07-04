@@ -7,6 +7,7 @@ import java.util.LinkedHashMap;
  * @author zhx
  */
 public class 第一个只出现一次的字符 {
+
     public int FirstNotRepeatingChar(String str) {
         LinkedHashMap<Character, Integer> map = new LinkedHashMap<Character, Integer>();
         for(int i=0;i<str.length();i++){
@@ -27,5 +28,16 @@ public class 第一个只出现一次的字符 {
             }
         }
         return pos;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Integer.valueOf(127) == Integer.valueOf(127));//true
+        System.out.println(Integer.valueOf(128) == Integer.valueOf(128));//false
+        System.out.println(new Integer(128).equals(128));//true
+        System.out.println(Integer.parseInt("128"));//128
+        System.out.println(Integer.valueOf(127).getClass());//Integer
+        String str = "abcd";
+        System.out.println(str.charAt(0));//"a"
+        System.out.println(Character.valueOf(str.charAt(0)).getClass());//'a'
     }
 }
