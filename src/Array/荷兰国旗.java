@@ -30,6 +30,7 @@ public class ºÉÀ¼¹úÆì {
     public static void main(String[] args) {
         int[] arr = new int[]{3, 5, 7, 8, 5, 5, 9, 10, 4, 3};
         partition(arr, 0, arr.length-1, 5);
+
         for (int a:arr) {
             System.out.println(a);
         }
