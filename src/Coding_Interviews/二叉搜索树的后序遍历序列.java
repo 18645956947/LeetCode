@@ -30,6 +30,7 @@ public class 二叉搜索树的后序遍历序列 {
                 return false;
             }
         }
+
         //判断左子树是否为一个后序遍历的二叉搜索树
         boolean left = VerifySquenceOfBST(sequence, start, i-1);
         //判断右子树是否为一个后序遍历的二叉搜索树
