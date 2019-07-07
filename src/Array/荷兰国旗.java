@@ -6,7 +6,7 @@ package Array;
  */
 public class ºÉÀ¼¹úÆì {
 
-    public static int[] partition(int[] arr, int L, int R, int num){
+    public static void partition(int[] arr, int L, int R, int num){
         int less = L - 1;
         int more = R + 1;
 
@@ -19,9 +19,6 @@ public class ºÉÀ¼¹úÆì {
                 swap(arr, L, --more);
             }
         }
-        return arr;
-
-
     }
 
     public static void swap(int[] arr, int i, int j){
@@ -32,9 +29,9 @@ public class ºÉÀ¼¹úÆì {
 
     public static void main(String[] args) {
         int[] arr = new int[]{3, 5, 7, 8, 5, 5, 9, 10, 4, 3};
-        int[] a = partition(arr, 0, arr.length-1, 5);
-        for (int b : a) {
-            System.out.println(b);
+        partition(arr, 0, arr.length-1, 5);
+        for (int a:arr) {
+            System.out.println(a);
         }
     }
 }
