@@ -23,4 +23,8 @@ public class 对称的二叉树 {
         }
         return left.val == right.val && isSymmetrical(left.left, right.right) && isSymmetrical(left.right, right.left);
     }
+
+    //非递归的版本
+
+
 }
