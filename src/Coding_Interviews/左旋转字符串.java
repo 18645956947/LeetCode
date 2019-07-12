@@ -12,7 +12,7 @@ public class ×óÐý×ª×Ö·û´® {
         if(len == 0){
             return "";
         }
-        int s = n % len;//1
+        int s = n % len;
         System.out.println(s);
         String st = str + str;
         System.out.println(st);
