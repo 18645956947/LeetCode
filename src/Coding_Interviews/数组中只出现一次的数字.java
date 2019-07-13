@@ -9,7 +9,6 @@ import java.util.Map;
  */
 public class 数组中只出现一次的数字 {
 
-
     public void FindNumsAppearOnce(int [] array,int num1[] , int num2[]) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < array.length; i++) {
