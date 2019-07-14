@@ -3,6 +3,7 @@ package Coding_Interviews;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 /**
  * 剑指offer -- 从上往下打印二叉树
@@ -10,6 +11,7 @@ import java.util.Queue;
  */
 public class 从上往下打印二叉树 {
 
+    //广度优先遍历
     public static ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
         ArrayList<Integer> res = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList<>();
@@ -29,6 +31,8 @@ public class 从上往下打印二叉树 {
         }
         return res;
     }
+
+
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
