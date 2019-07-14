@@ -1,9 +1,6 @@
 package Coding_Interviews;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * 剑指offer -- 从上往下打印二叉树
@@ -13,7 +10,7 @@ public class 从上往下打印二叉树 {
 
     //广度优先遍历
     public static ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
-        ArrayList<Integer> res = new ArrayList<>();
+        ArrayList<Integer> res = new ArrayList();
         Queue<TreeNode> queue = new LinkedList<>();
         if(root == null){
             return null;
@@ -40,6 +37,10 @@ public class 从上往下打印二叉树 {
         root.right = new TreeNode(3);
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
-        System.out.println(PrintFromTopToBottom(root));
+        //System.out.println(PrintFromTopToBottom(root));
+        List<Integer> list = new ArrayList<>();
+        System.out.println(list.getClass());
+        ArrayList<Integer> ll = new ArrayList<>();
+        System.out.println(ll.getClass());
     }
 }
