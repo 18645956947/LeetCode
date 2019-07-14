@@ -42,5 +42,6 @@ public class 从上往下打印二叉树 {
         System.out.println(list.getClass());
         ArrayList<Integer> ll = new ArrayList<>();
         System.out.println(ll.getClass());
+
     }
 }
