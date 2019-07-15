@@ -31,9 +31,6 @@ public class 平衡二叉树 {
         return Math.abs((left - right) > 1 ? -1 : 1 + Math.max(left, right));
     }
 
-    public static int text(int i){
-        return i;
-    }
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
@@ -42,6 +39,5 @@ public class 平衡二叉树 {
         root.left.left = new TreeNode(4);
         root.left.left.right = new TreeNode(5);
         System.out.println(IsBalanced_Solution(root));
-        System.out.println(text(7) != -1);
     }
 }
