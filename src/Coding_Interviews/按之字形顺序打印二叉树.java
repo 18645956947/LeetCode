@@ -39,6 +39,7 @@ public class 按之字形顺序打印二叉树 {
     }
 
     public static void insertTreeNode(TreeNode root){
+
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
         root.left.left = new TreeNode(4);
