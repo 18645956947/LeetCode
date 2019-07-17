@@ -49,7 +49,6 @@ public class 按之字形顺序打印二叉树 {
     }
 
     public static void main(String[] args) {
-
         TreeNode root = new TreeNode(1);
         insertTreeNode(root);
         ArrayList<ArrayList<Integer>> ll = Print(root);
