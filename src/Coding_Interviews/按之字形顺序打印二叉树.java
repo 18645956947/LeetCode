@@ -15,7 +15,6 @@ public class 按之字形顺序打印二叉树 {
             return result;
         }
         list.add(pRoot);
-
         boolean flag = true;
         while (!list.isEmpty()){
             ArrayList<TreeNode> nextNode = new ArrayList<>();
