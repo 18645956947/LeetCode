@@ -39,8 +39,7 @@ public class 把二叉树打印成多行 {
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        InsertTreeNode.insertTreeNode(root);
+        TreeNode root = InsertTreeNode.insertTreeNode();
         ArrayList<ArrayList<Integer>> ll = Print(root);
         System.out.println(ll);
     }
