@@ -20,6 +20,5 @@ public class ¶þ²æÊ÷µÄ¾µÏñ {
         root.left = temp;
         Mirror(root.left);
         Mirror(root.right);
-
     }
 }
