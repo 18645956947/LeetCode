@@ -30,7 +30,6 @@ public class Æ½ºâ¶þ²æÊ÷ {
         return Math.abs((left - right) > 1 ? -1 : 1 + Math.max(left, right));
     }
 
-
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
