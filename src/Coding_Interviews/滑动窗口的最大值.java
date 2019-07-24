@@ -19,7 +19,6 @@ public class 滑动窗口的最大值 {
             }
             return res;
         }
-        //[l ... r]
         int l = 0;
         int r = l+size-1;
         ArrayList<ArrayList<Integer>> list = new ArrayList<>();
