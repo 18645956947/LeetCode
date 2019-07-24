@@ -10,10 +10,7 @@ public class 滑动窗口的最大值 {
 
     public static ArrayList<Integer> maxInWindows(int [] num, int size) {
         ArrayList<Integer> res = new ArrayList<>();
-        if(num == null || num.length == 0 || num.length < size || size < 0){
-            return res;
-        }
-        if(size == 0){
+        if(num == null || num.length == 0 || num.length < size || size < 0 || size == 0){
             return res;
         }
         if(size == 1){
