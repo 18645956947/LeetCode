@@ -25,11 +25,8 @@ public class 滑动窗口的最大值 {
         ArrayList<ArrayList<Integer>> list = new ArrayList<>();
 
         while (r < num.length){
-            int MAX = max(num[l], num[l+1], num[r]);
-//            System.out.println(num[l] +"-----"+num[l+1] +"---"+num[r]);
+            int MAX = max(num[l++], num[l+1], num[r++]);
             res.add(MAX);
-            l++;
-            r++;
         }
         return res;
 
@@ -40,6 +37,6 @@ public class 滑动窗口的最大值 {
 
     public static void main(String[] args) {
         int[] arr = new int[]{2,3,4,2,6,2,5,1};
-        System.out.println(滑动窗口的最大值.maxInWindows(arr, 1));
+        System.out.println(滑动窗口的最大值.maxInWindows(arr, 3));
     }
 }
