@@ -27,6 +27,7 @@ public class 调整数组顺序使奇数位于偶数前面 {
     }
 
     public static void main(String[] args) {
+
         int[] a = new int[]{1,3,2,6,8,5};
         调整数组顺序使奇数位于偶数前面.reOrderArray(a);
         for (int i = 0; i < a.length; i++) {
