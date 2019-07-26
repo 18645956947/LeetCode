@@ -24,7 +24,6 @@ public class 二叉树中和为某一值的路径 {
         if(target == 0 && root.left ==null && root.right == null){
             res.add(new ArrayList<>(list));
         }
-
         FindPath(root.left, target);
         FindPath(root.right, target);
         list.remove(list.size()-1);
