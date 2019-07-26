@@ -19,6 +19,7 @@ public class 二叉树中和为某一值的路径 {
         if(root == null){
             return res;
         }
+
         list.add(root.val);
         target -= root.val;
         if(target == 0 && root.left ==null && root.right == null){
