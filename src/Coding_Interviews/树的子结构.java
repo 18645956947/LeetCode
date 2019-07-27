@@ -28,7 +28,6 @@ public class 树的子结构 {
         if(node2 == null){
             return true;
         }
-
         if(node1 == null){
             return false;
         }
