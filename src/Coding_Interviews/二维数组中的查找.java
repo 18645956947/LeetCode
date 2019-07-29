@@ -29,6 +29,7 @@ public class 二维数组中的查找 {
         return false;
     }
 
+
     public static boolean Find02(int target, int [][] array) {
         if(array == null || array.length == 0){
             return false;
