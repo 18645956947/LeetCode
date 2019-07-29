@@ -7,9 +7,12 @@ package Coding_Interviews;
 public class 二维数组中的查找 {
 
     public static boolean Find(int target, int [][] array) {
+        if(array == null || array.length == 0){
+            return false;
+        }
         for(int i = 0;i < array.length;i++){
             int low = 0;
-            int high = array.length-1;
+            int high = array[i].length-1;
             while (low <= high){
                 int mid = (low + high)/2;
                 if(array[i][mid] == target){
