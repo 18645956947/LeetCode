@@ -47,6 +47,7 @@ public class 把字符串转换成整数 {
         for (int i = 0; i < c.length; i++) {
             System.out.println((c[i] - '0'));
         }
+
         Integer f = 3;
         System.out.println(f.getClass().getSimpleName());
     }
