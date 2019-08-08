@@ -16,6 +16,7 @@ public class 两个栈实现队列 {
     public void push(int node) {
         stack1.push(node);
     }
+
     public int pop() {
         if(stack1.isEmpty() && stack2.isEmpty()){
             throw new RuntimeException("Queue is Empty");
