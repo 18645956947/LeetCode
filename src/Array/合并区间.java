@@ -9,6 +9,7 @@ import java.util.List;
  * @author zhx
  */
 public class 合并区间 {
+
     public static int[][] merge(int[][] intervals) {
         List<int[]> res = new ArrayList();
         if(intervals.length == 0 || intervals == null){
