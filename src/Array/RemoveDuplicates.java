@@ -7,7 +7,6 @@ package Array;
 * 
 */
 public class RemoveDuplicates {
-
 	public int removeDuplicates(int[] nums) {
     	int number = 0;
         for(int i = 0;i<nums.length;i++){
