@@ -14,6 +14,7 @@ import java.util.List;
 * 如果list里有偶数个则返回(list.get(m) + list.get(m-1))/2，如果list的个数是奇数则直接返回中位数。
 */
 public class FindMedianSortedArrays {
+
 	 public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
 		 List<Double> list = new ArrayList();
 		 double mid = 0;
