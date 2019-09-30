@@ -5,14 +5,14 @@ package thread;
  * 方法一：使用手动构造屏障
  * @author zhx
  */
-public class 按序打印 {
+public class 按序打印_01 {
 
     private boolean firstFinished ;
     private boolean secondFinished;
     //对每一种情况都加上锁
     private Object lock = new Object();
 
-    public 按序打印() {
+    public 按序打印_01() {
 
     }
 
@@ -48,7 +48,7 @@ public class 按序打印 {
     }
 
     public static void main(String[] args) {
-        按序打印 a = new 按序打印();
+        按序打印_01 a = new 按序打印_01();
         Runnable printFirst = () -> {
             System.out.println("first");
         };
