@@ -12,7 +12,7 @@ public class LRUCache {
         int key;
         int value;
         DLinkedNode pre;
-        DLinkedNode post;
+        DLinkedNode next;
 
     }
 
@@ -23,9 +23,9 @@ public class LRUCache {
     private void addNode(DLinkedNode node){
 
         node.pre = head;
-        node.post = head.post;
-        head.post.pre = node;
-        head.post = node;
+        node.next = head.next;
+        head.next.pre = node;
+        head.next = node;
 
     }
 
@@ -35,8 +35,8 @@ public class LRUCache {
      */
     private void removeNode(DLinkedNode node){
         DLinkedNode pre = node.pre;
-        DLinkedNode post = node.post;
-        pre.post = post;
+        DLinkedNode post = node.next;
+        pre.next = post;
         post.pre = pre;
 
     }
@@ -71,8 +71,8 @@ public class LRUCache {
         head.pre = null;
 
         tail = new DLinkedNode();
-        tail.post = null;
-        head.post = tail;
+        tail.next = null;
+        head.next = tail;
         tail.pre = head;
 
     }
