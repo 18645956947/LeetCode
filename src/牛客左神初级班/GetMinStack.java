@@ -4,7 +4,7 @@ import java.util.EmptyStackException;
 import java.util.Stack;
 
 /**
- * 请实现一个基本栈  有一个getMin()函数 可以实现再O（1）时间内查询出栈内最小的值
+ * 请实现一个基本栈  有一个getMin()函数 可以实现在O(1)时间内查询出栈内最小的值
  * @author zhx
  */
 public class GetMinStack {
