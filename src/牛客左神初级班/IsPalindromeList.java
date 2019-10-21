@@ -205,5 +205,6 @@ public class IsPalindromeList {
         System.out.println(isPalindrome3(head) + " | ");
         printLinkedList(head);
         System.out.println("=========================");
+
     }
 }
