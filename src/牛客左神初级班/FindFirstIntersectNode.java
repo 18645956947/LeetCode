@@ -13,6 +13,7 @@ public class FindFirstIntersectNode {
             this.value = value;
         }
     }
+
     public static Node getIntersectNode(Node head1, Node head2){
         // 1.首先是判断两个链表是否有环，有的话返回其环的入口 没有返回null
         // 2.一共两种情况 （1）两个无环链表相交（2）两个有环链表相交
