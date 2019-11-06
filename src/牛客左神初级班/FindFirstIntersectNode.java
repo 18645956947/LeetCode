@@ -186,6 +186,7 @@ public class FindFirstIntersectNode {
             return null;
         }
     }
+
     public static void main(String[] args) {
         // 1->2->3->4->5->6->7->null
         Node head1 = new Node(1);
