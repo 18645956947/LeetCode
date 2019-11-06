@@ -10,6 +10,7 @@ import java.util.HashSet;
 * 用HashSet判断数组是否重复
 */
 public class ContainsDuplicate {
+
 	public boolean containsDuplicate(int[] nums) {
 		HashSet<Integer> h1 = new HashSet<Integer>();
 		for(int i = 0;i<nums.length;i++) {
