@@ -43,7 +43,7 @@ public class CompleteTreeNodeNumber {
             return (1 << (h - l)) + bs(node.right, l+1, h);
 
         }
-        //否则的话就是左子树是满二叉树 满足节点个数公式2^深度 - 1 此时左子树是又是一颗完全二叉树，继续递归下去
+        //否则的话就是右子树是满二叉树 满足节点个数公式2^深度 - 1 此时左子树是又是一颗完全二叉树，继续递归下去
         else {
             return (1 << (h - l - 1)) + bs(node.left, l + 1, h);
         }
