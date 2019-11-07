@@ -17,6 +17,7 @@ public class CompleteTreeNodeNumber {
         }
     }
 
+
     public static int nodeNum(Node head){
         if (head == null) {
             return 0;
@@ -24,13 +25,26 @@ public class CompleteTreeNodeNumber {
         return bs(head, 1, mostLeftLevel(head, 1));
     }
 
+    /**
+     *
+     * @param node 当前节点
+     * @param l 当前节点在第几层
+     * @param h 真个树的深度
+     * @return 以node开头的树的节点个数
+     */
     public static int bs(Node node, int l, int h){
+        //来到了叶节点
         if(l == h){
             return 1;
         }
+        //看是否右子树的最左边界到底
         if(mostLeftLevel(node.right, l + 1) == h){
-            return (1 << (h - 1)) + bs(node.right, l+1, h);
-        }else {
+            // 1 << h - l 等同于 2^(h - l)
+            return (1 << (h - l)) + bs(node.right, l+1, h);
+
+        }
+        //否则的话就是左子树是满二叉树 满足节点个数公式2^深度 - 1 此时左子树是又是一颗完全二叉树，继续递归下去
+        else {
             return (1 << (h - l - 1)) + bs(node.left, l + 1, h);
         }
     }
