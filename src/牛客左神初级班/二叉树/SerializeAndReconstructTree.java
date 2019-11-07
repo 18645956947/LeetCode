@@ -42,7 +42,7 @@ public class SerializeAndReconstructTree {
     //一个递归函数 恢复二叉树的结构
     public static Node reconPreOrder(Queue<String> queue){
         String cur = queue.poll();
-        if(cur.equals("#!")){
+        if(cur.equals("#")){
             return null;
         }
 
