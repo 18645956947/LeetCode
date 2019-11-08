@@ -13,8 +13,10 @@ public class BitArray {
         int index = 30000;
         //把数组平分成1000个也就是0~999， 首先判断落在哪个0~999的哪个位置，我称为桶
         int intIndex = index / 32;
+        System.out.println(intIndex);
         //描述的是把这个桶下的哪个bit位描黑
         int bitIndex = index % 32;
+        System.out.println(bitIndex);
         //1 << bitIndex 表示把第bitIndex位置的数从0变成1 ，然后与之前的数做一个或的运算
         arr[intIndex] = (arr[intIndex] | (1 << bitIndex));
     }
