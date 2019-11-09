@@ -43,7 +43,6 @@ public class IsBSTAndCBT {
         return true;
     }
 
-
     //验证是否是完全二叉树
     //一共两种可能性：
     //1.如果一个节点有右子树没有左子树那么直接返回false
