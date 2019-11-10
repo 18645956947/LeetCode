@@ -10,6 +10,7 @@ import java.util.Stack;
  * @author zhx
  */
 public class IsBSTAndCBT {
+
     //判断是否是二叉搜索树
     //思路是：看其二叉树的中序遍历是否是按照数值升序上升的
     //首先写一个二叉树的中序遍历
