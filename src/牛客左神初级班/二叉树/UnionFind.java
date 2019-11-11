@@ -5,6 +5,8 @@ import java.util.List;
 
 /**
  * 并查集的基础
+ * 1.判断两个集合是否是一个
+ * 2.把两个元素所在的集合连接起来
  * @author zhx
  */
 public class UnionFind {
@@ -28,7 +30,7 @@ public class UnionFind {
                 sizeMap.put(node, 1);
             }
         }
-
+        //思想就是不断的向上找直到遇到头节点，在这个过程中进行优化，把所有节点的父节点都设置为公共的最开始的父节点
         private Node findHead(Node node){
             Node father = fatherMap.get(node);
             if(father != node){
@@ -37,11 +39,11 @@ public class UnionFind {
             fatherMap.put(node, father);
             return father;
         }
-
+        //判断两个点所在的结合是否是同一个集合
         private boolean isSameSet(Node a, Node b){
             return findHead(a) == findHead(b);
         }
-
+        //把两个点所在的集合连接起来
         private void union(Node a, Node b){
             if(a == null || b == null){
                 return;
