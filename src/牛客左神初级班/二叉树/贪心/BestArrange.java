@@ -2,6 +2,7 @@ package 牛客左神初级班.二叉树.贪心;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.PriorityQueue;
 
 /**
  * 一些项目要占用一个会议室宣讲，会议室不能同时容纳两个项目的宣讲。
@@ -31,6 +32,9 @@ public class BestArrange {
      * @return res 最大的开会的数量
      */
     public static int bestArrange(Program[] programs, int cur){
+        //该方式是利用一个小根堆存储结束时间最短的项目
+        PriorityQueue<Program> minQ = new PriorityQueue<>(new ProgramComparator());
+        //或者直接把数组按照结束时间短的排个序
         Arrays.sort(programs, new ProgramComparator());
         int res = 0;
         for (int i = 0;i<programs.length;i++){
