@@ -1,6 +1,9 @@
 package 牛客左神初级班.递归与动态规划;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 
 public class Recursive {
     /**
@@ -101,6 +104,44 @@ public class Recursive {
         int down = minPath1(matrix, i+1, j);
         return matrix[i][j] + Math.min(right, down);
     }
+
+    /**
+     * 剑指OFFER - 字符串的全排列
+     * 考虑有重复字符
+     */
+    public static class 字符串的全排列{
+        public ArrayList<String> Permutation(String str) {
+            List<String> list = new ArrayList<>();
+            if(str.length() == 0){
+                return (ArrayList) list;
+            }
+            char[] chs = str.toCharArray();
+            process(chs, 0, list);
+            Collections.sort(list);
+            return (ArrayList) list;
+        }
+        public void process(char[] chs, int i, List<String> list){
+            if(i == chs.length - 1){
+                if(!list.contains(new String(chs))){
+                    list.add(new String(chs));
+                }
+            }else{
+                for(int j = i; j < chs.length;j++){
+                    swap(chs, i, j);
+                    process(chs, i + 1, list);
+                    swap(chs, i, j);
+                }
+            }
+        }
+        public void swap(char[] chs, int i, int j){
+            if (i != j) {
+                char t = chs[i];
+                chs[i] = chs[j];
+                chs[j] = t;
+            }
+        }
+    }
+
 
     public static void main(String[] args) {
 
