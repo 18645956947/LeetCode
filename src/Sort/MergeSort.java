@@ -50,7 +50,7 @@ public class MergeSort {
 
         int i = 0, j = 0;
         int K = L;
-        //比较这两个数组的大小，知直到一个数组为空为止
+        //比较这两个数组的大小，直到一个数组为空为止
         while(i < leftArrays.length && j < rightArrays.length) {
             if(leftArrays[i] < rightArrays[j]) {
                 arrays[K] = leftArrays[i];
