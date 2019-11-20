@@ -63,6 +63,7 @@ public class MergeSort {
                 j++;
             }
         }
+
         //如果左边没满则把左边的填入数组中
         if(i < leftArrays.length){
             arrays[K] = leftArrays[i];
