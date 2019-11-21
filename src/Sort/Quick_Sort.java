@@ -48,9 +48,11 @@ public class Quick_Sort {
     }
 
     public static void main(String[] args) {
+
         int[] nums = new int[]{6 ,1 ,2 ,7 ,9 ,3 ,4 ,5 ,10 ,8};
         Quick_Sort quick_sort = new Quick_Sort();
         quick_sort.quick(nums, 0, nums.length-1);
         System.out.println(Arrays.toString(nums));
+
     }
 }
