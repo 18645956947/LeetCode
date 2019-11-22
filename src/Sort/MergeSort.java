@@ -37,6 +37,7 @@ public class MergeSort {
      * @param R		指向数组的最后一个元素
      */
     public static void merge(int[] arrays, int L,int M, int R) {
+
         //左边的数组大小
         int[] leftArrays = new int[M - L];
         //右边的数组大小
