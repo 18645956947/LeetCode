@@ -12,7 +12,7 @@ import javax.print.attribute.standard.MediaName;
 public class MergeSort {
 
     public static void mergeSort(int[] arr){
-        if(arr == null || arr.length <= 1){
+        if(arr == null || arr.length < 2){
             return;
         }
         mergePrcess(arr, 0, arr.length - 1);
@@ -21,7 +21,7 @@ public class MergeSort {
         if(L == R){
             return;
         }
-        int mid = L + (L + R) >> 1;
+        int mid = L + ((R - L) >> 1);
         mergePrcess(arr, L, mid);
         mergePrcess(arr, mid + 1, R);
         merge(arr, L, mid, R);
@@ -32,7 +32,7 @@ public class MergeSort {
         int p2 = mid + 1;
         int[] help = new int[R - L + 1];
         while (p1 <= mid && p2 <= R) {
-            help[i++] = arr[p1] > arr[p2] ? arr[p2++] : arr[p1++];
+            help[i++] = arr[p1] < arr[p2] ? arr[p1++] : arr[p2++];
         }
         while (p1 <= mid){
             help[i++] = arr[p1++];
@@ -40,14 +40,14 @@ public class MergeSort {
         while (p2 <= R){
             help[i++] = arr[p2++];
         }
-        for (int j = 0; j < arr.length - 1; j++) {
-            arr[j] = help[j];
+        for (int j = 0; j < help.length; j++) {
+            arr[L + j] = help[j];
         }
     }
 
 
     public static void main(String[] args) {
-        int[] arrays = {2, 1, 8};
+        int[] arrays = {1,3,4,2,5};
         MergeSort.mergeSort(arrays);
         for (int i = 0; i < arrays.length; i++) {
             System.out.print(arrays[i]);
