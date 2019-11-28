@@ -12,7 +12,7 @@ public class BubbleSort {
 	
 
 	public static int[] bubble(int[] nums){
-		if(nums == null || nums.length <= 2){
+		if(nums == null || nums.length < 2){
 			return nums;
 		}
 		for (int end = nums.length-1; end > 0; end--) {
