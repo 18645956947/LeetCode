@@ -6,66 +6,49 @@ package Coding_Interviews;
  */
 public class 数组中的逆序对 {
 
-    public static int count;
-    public static int InversePairs(int [] array) {
-        /*
-        直观想出的方法：测试用例只通过50%
-        int len = array.length;
-        int p = 0;
-        for(int i = 0;i<len - 1;i++){
-
-            for(int j = i + 1;j<len;j++){
-                if(array[j] < array[i]){
-                    p++;
-                }
-            }
-        }
-        return p % 1000000007;*/
-        if(array == null || array.length == 0){
+    public int res = 0;
+    public int InversePairs(int [] array) {
+        if(array == null || array.length <= 1){
             return 0;
         }
-        int len = array.length;
-        int[] copy = new int[len];
-        sortMerge(array, 0, array.length - 1, copy);
-        return count;
-
+        mergeProcess(array, 0, array.length - 1);
+        return res ;
     }
-    private static void sortMerge(int[] a, int first, int last, int[] temp){
-        if(first < last){
-            int mid = (first + last) >> 1;
-            sortMerge(a, first, mid, temp);
-            sortMerge(a, mid + 1, last, temp);
-            //最后合并两个有序数组
-            mergeArray(a, first, mid, last, temp);
+    private void mergeProcess(int[] arr, int L, int R){
+        if(L == R){
+            return ;
         }
+        int mid = L + ((R - L) >> 1);
+        mergeProcess(arr, L, mid);
+        mergeProcess(arr, mid + 1, R);
+        merge(arr, L, mid, R);
     }
-    private static void mergeArray(int[] a, int first, int mid, int last, int[] temp){
-        int i = first, j = mid + 1;
-        int m = mid, n = last;
-        int k = 0;
-        while(i <= m && j<=n){
-            if(a[i] > a[j]){
-                temp[k++] = a[j++];
-                count += mid - i + 1;
-            }
-            else{
-                temp[k++] = a[i++];
-            }
+    private int merge(int[] arr, int L ,int mid, int R){
+        int i = 0;
+        int p1 = L;
+        int p2 = mid + 1;
+        int[] tem = new int[R - L + 1];
+        while(p1 <= mid && p2 <= R){
+            res += arr[p1] > arr[p2] ? (mid - p1 + 1) : 0;
+            //最开始 我就卡在这里，加上这行代码就好使了。
+            res = res > 1000000007? res % 1000000007 : res;
+            tem[i++] = arr[p1] > arr[p2] ? arr[p2++] : arr[p1++];
         }
-        while (i <= m){
-            temp[k++] = a[i++];
+        while(p1 <= mid){
+            tem[i++] = arr[p1++];
         }
-        while (j <= n){
-            temp[k++] = a[j++];
+        while(p2 <= R){
+            tem[i++] = arr[p2++];
         }
-        for (int l = 0; l < k; l++) {
-            a[first + i] = temp[i];
+        for(int j = 0;j < tem.length;j++){
+            arr[L + j] = tem[j];
         }
+        return res;
     }
 
     public static void main(String[] args) {
-        int data[] = { 4, 3, 2, 1 };
-        System.out.println(数组中的逆序对.InversePairs(data));
-
+        int data[] = { 4, 3, 3, 1, 8, 4 };
+        数组中的逆序对 ss = new 数组中的逆序对();
+        System.out.println(ss.InversePairs(data));
     }
 }
