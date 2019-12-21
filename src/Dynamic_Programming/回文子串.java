@@ -8,6 +8,7 @@ package Dynamic_Programming;
 public class ╩ьндвс╢╝ {
 
     public int countSubstrings(String s) {
+
         int n = s.length();
         int res = 0;
         int[][] dp = new int[n][n];
