@@ -9,6 +9,7 @@ import java.util.Set;
  * @author zhx
  */
 public class 单词拆分 {
+
     //1.暴力递归方法
     public boolean wordBreak(String s, List<String> wordDict) {
         return process(s, new HashSet<String>(wordDict), 0);
