@@ -12,7 +12,7 @@ public class 课程表 {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         int[] indegrees = new int[numCourses];
         for (int[] cp : prerequisites) {
-            // 入度
+            // 入度 就是需要选的课
             indegrees[cp[0]]++;
         }
         LinkedList<Integer> queue = new LinkedList<>();
