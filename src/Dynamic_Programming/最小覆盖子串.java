@@ -20,7 +20,7 @@ public class ×îÐ¡¸²¸Ç×Ó´® {
         int r = 0;
         int len = Integer.MAX_VALUE;
         int res_l = 0;
-        int res_r = 0;
+        int res_r = -1;
 
         while (r < s.length()){
             char c = s.charAt(r);
