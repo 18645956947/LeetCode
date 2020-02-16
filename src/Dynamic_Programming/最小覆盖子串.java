@@ -56,7 +56,7 @@ public class 最小覆盖子串 {
 
     public static void main(String[] args) {
         String s = "ABAACBAGB";
-        String t = "ACB";
+        String t = "AGCB";
         System.out.println(最小覆盖子串.minWindow(s, t));
     }
 }
