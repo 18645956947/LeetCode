@@ -5,8 +5,7 @@ package Coding_Interviews;
  * @author zhx
  */
 public class ¾ØÕóÖĞµÄÂ·¾¶ {
-    public boolean hasPath(char[] matrix, int rows, int cols, char[] str)
-    {
+    public boolean hasPath(char[] matrix, int rows, int cols, char[] str) {
         boolean[] a = new boolean[matrix.length];
         for(int i = 0; i < rows;i++){
             for(int j = 0; j < cols; j++){
