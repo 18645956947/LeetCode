@@ -19,7 +19,11 @@ public class 测试生产者消费者 {
         @Override
         public void run() {
             for (int i = 0; i < 10; i++) {
-
+                try {
+                    Thread.sleep(3000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 synchronized (LOCK) {
                     while (count == FULL) {
                         try {
@@ -39,7 +43,11 @@ public class 测试生产者消费者 {
         @Override
         public void run() {
             for (int i = 0; i < 10; i++) {
-
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 synchronized (LOCK) {
                     while (count == 0) {
                         try {
