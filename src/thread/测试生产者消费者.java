@@ -39,6 +39,7 @@ public class 测试生产者消费者 {
             }
         }
     }
+
     class Consumer implements Runnable {
         @Override
         public void run() {
