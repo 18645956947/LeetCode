@@ -7,21 +7,36 @@ package List;
 * 
 */
 public class DeleteDuplicates_1 {
-	public ListNode deleteDuplicates(ListNode head) {
+	public static ListNode deleteDuplicates(ListNode head) {
         if(head == null || head.next == null){
             return head;
         }
-        ListNode p = head;
-        while(p.next!=null){
-            if(p.val == p.next.val){
-                p.next = p.next.next;
-            }
-            else{
-                p = p.next;
+        ListNode root = new ListNode(-1);
+        root.next = head;
+        ListNode cur = root.next;
+        ListNode pre = root;
+        while (cur != null){
+            if(cur.next != null && cur.next.val == cur.val){
+                while (cur.next != null && cur.next.val == cur.val){
+                    cur = cur.next;
+                }
+                pre.next = cur.next;
+                cur = cur.next;
+            }else{
+                pre = pre.next;
+                cur = cur.next;
             }
         }
-        return head;
-        
+        return root.next;
     }
+
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(1);
+        l1.next = new ListNode(1);
+        l1.next.next = new ListNode(2);
+        l1.next.next.next = new ListNode(2);
+        l1.next.next.next.next = new ListNode(3);
+        System.out.println(DeleteDuplicates_1.deleteDuplicates(l1).val);
+	}
 }
  
