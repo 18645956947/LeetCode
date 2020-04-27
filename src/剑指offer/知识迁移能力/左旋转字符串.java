@@ -9,6 +9,7 @@ public class ×óÐý×ª×Ö·û´® {
         if(str == "" || str.length() == 0){
             return "";
         }
+
         int length = str.length();
         char[] chs = str.toCharArray();
         reverse(chs, 0, length - 1);
