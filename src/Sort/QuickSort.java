@@ -19,7 +19,7 @@ public class QuickSort {
     public static int[] partition(int[] arr, int L, int R){
         int cur = L;
         int less = L - 1;
-        int more = R +1;
+        int more = R;
         while (cur < more){
            if(arr[cur] > arr[R]){
                swap(arr, cur, --more);
@@ -30,7 +30,7 @@ public class QuickSort {
            }
         }
         swap(arr, R, more);
-        return new int[]{less + 1, more - 1};
+        return new int[]{less + 1, more};
 
     }
     public static void swap(int[] arr, int i, int j){

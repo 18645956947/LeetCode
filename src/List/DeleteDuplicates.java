@@ -6,13 +6,11 @@ package List;
 * @Description: 2. 删除排序链表中的重复元素 II
 *  采用双指针方法
 */
+
+
 public class DeleteDuplicates {
-	class ListNode {
-		int val;
-		ListNode next;
-		ListNode(int x) { val = x; }
-	}
-	public ListNode deleteDuplicates(ListNode head) {
+
+	public static ListNode deleteDuplicates(ListNode head) {
 	   if(head == null || head.next == null){
 	       return head;
 	   }
@@ -34,6 +32,14 @@ public class DeleteDuplicates {
 	        cur = cur.next;
 	    }
 	    return h.next;
+	}
+	public static void main(String[] args) {
+		List.ListNode l1 = new List.ListNode(1);
+		l1.next = new List.ListNode(1);
+		l1.next.next = new List.ListNode(3);
+		l1.next.next.next = new List.ListNode(3);
+		l1.next.next.next.next = new List.ListNode(4);
+		System.out.println(DeleteDuplicates_1.deleteDuplicates(l1).val);
 	}
 } 
  
